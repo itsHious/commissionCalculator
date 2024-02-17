@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" prefHeight="511.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints maxWidth="149.0" minWidth="149.0" prefWidth="149.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints maxHeight="44.0" minHeight="25.0" prefHeight="32.0" />
+        <RowConstraints maxHeight="65.0" minHeight="30.0" prefHeight="35.0" />
+        <RowConstraints maxHeight="37.0" minHeight="9.0" prefHeight="32.0" />
+        <RowConstraints />
+        <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+    </rowConstraints>
+
+    <children>
+        <Label text="Total Sales(GHS)" GridPane.columnIndex="0" />
+       <TextField fx:id="salesvalue" GridPane.columnIndex="1" />
+
+        <Label fx:id="sliderText" text="10%" GridPane.rowIndex="1" />
+        <Slider fx:id="commissionPercentage" max="50.0" min="10" onDragDetected="#onSliderChange" prefHeight="49.0" prefWidth="305.0" value="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Button alignment="CENTER" defaultButton="true" onMouseClicked="#onCalculateClick" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label prefWidth="96.0" text="Commission(GHS)" GridPane.rowIndex="3" />
+        <TextField fx:id="commissionvalue" editable="false" prefWidth="162.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Button fx:id="reset" onMouseClicked="#resetFields" text="Reset" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </children>
+
+</GridPane>
